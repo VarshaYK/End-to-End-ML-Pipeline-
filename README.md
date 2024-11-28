@@ -33,16 +33,16 @@ Evaluation:
 The evaluate.py script loads the trained model and evaluates its performance (accuracy) on the dataset.
 The evaluation metrics are logged to MLflow for tracking.
 
-# Goals:
+### Goals:
 Reproducibility: By using DVC, the pipeline ensures that the same data, parameters, and code can reproduce the same results, making the workflow reliable and consistent.
 Experimentation: MLflow allows users to easily track different experiments (with varying hyperparameters) and compare the performance of models.
 Collaboration: DVC and MLflow enable smooth collaboration in a team environment, where different users can work on the same project and track changes seamlessly.
 
-# Use Cases:
+#### Use Cases:
 Data Science Teams: Teams can use this project setup to track datasets, models, and experiments in a reproducible and organized manner.
 Machine Learning Research: Researchers can quickly iterate over different experiments, track performance metrics, and manage data versions effectively.
 
-# Technology Stack:
+#### Technology Stack:
 Python: The core programming language for data processing, model training, and evaluation.
 DVC: For version control of data, models, and pipeline stages.
 MLflow: For logging and tracking experiments, metrics, and model artifacts.
@@ -67,3 +67,10 @@ dvc stage add -n train \
 dvc stage add -n evaluate \
     -d src/evaluate.py -d models/model.pkl -d data/raw/data.csv \
     python src/evaluate.py
+
+
+![image](https://github.com/user-attachments/assets/3194e4f6-0241-458c-a0bf-2c8ae956e3fe)
+
+
+![image](https://github.com/user-attachments/assets/4e1eac5e-f302-490e-86c8-b49daa700422)
+
